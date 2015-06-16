@@ -1,0 +1,11 @@
+.mega-box{
+	text-align: center;
+}
+
+.box{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	border: solid;
+	background-color: gray;
+}
