@@ -11,3 +11,9 @@
 	background-color: gray;
 	font-size: 170px;
 }
+
+button{
+	float: left;
+	background-color: gray;
+	font-size: 30px;
+}
