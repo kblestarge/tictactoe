@@ -1,11 +1,13 @@
-.mega-box{
+.row{
+	clear: both;
 	text-align: center;
 }
 
 .box{
 	width: 200px;
 	height: 200px;
-	display: inline-block;
+	float: left;
 	border: solid;
 	background-color: gray;
+	font-size: 170px;
 }

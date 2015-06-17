@@ -1,41 +1,32 @@
-var array = ["blue", "yellow", "green", "red", "orange"];
-var dArray = [["blue", 1,2,3], ["forest green", 4,5,6], ["moss green",7,8,9]];
+var xo = ["X", "O"];
 var i = 0;
-var i2 = 0;
-var i3 = 0;
-
-function arrayFunction() {
-
-	document.getElementById("color").innerHTML=array[i];
-
-	if(i == array.length-1){
-		i = 0;
-	}else{
-		i++;
-	}
-}
-
-function twoArrayFunction() {
-
-	var ul = document.getElementById("ul");
-	var li = document.createElement("li");
-	li.innerHTML=dArray[i2];
-	ul.appendChild(li);
-
-	if(i2 == dArray.length-1){
-		i2 = 0;
-	}else{
-		i2++;
-	}
-}
+var x = [];
+var o = [];
 
 function changeColor(id) {
 
-	document.getElementById(id).style.backgroundColor = array[i3];
+	box = document.getElementById(id);
 
-	if(i3 == array.length-1){
-		i3 = 0;
-	}else{
-		i3++;
+	if(i == 0 && box.innerHTML == ""){
+		box.style.backgroundColor = "green";
+		box.innerHTML = xo[i];
+		x.push(id);
+		console.log("X:",x);
+		// winCheck(i);
+		i = 1;
+	}else if(i == 1 && box.innerHTML == ""){
+		box.style.backgroundColor = "yellow";
+		box.innerHTML = xo[i];
+		o.push(id);
+		console.log("O:",o);
+		// winCheck(i);
+		i = 0;
 	}
 }
+
+// var winCombo = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]];
+
+// function winCheck(player){
+// 	for()
+// 	winCombo
+// }
