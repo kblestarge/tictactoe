@@ -1,19 +1,57 @@
-.row{
-	clear: both;
+body{
 	text-align: center;
+	background-color: #260F0A;
+}
+
+h1{
+	color: #EBEFF2;
+	font-size: 80px;
+	margin-bottom: 10px;
+}
+
+.mega-box{
+	margin: 0 auto;
+	display: table;
+}
+
+.row{
+	display: table-row;
 }
 
 .box{
+	display: table-cell;
 	width: 200px;
 	height: 200px;
-	float: left;
 	border: solid;
-	background-color: gray;
+	background-color: #EBEFF2;
 	font-size: 170px;
+	border-color: #260F0A;
+	cursor: hand;
+}
+
+.o-hov{
+
+}
+
+.o-hov:hover{
+	background-color: black;
+}
+
+.x-hov{
+
+}
+
+.x-hov:hover{
+	background-color: red;
 }
 
 button{
-	float: left;
-	background-color: gray;
+	padding: 11px;
+	margin-top: 30px;
+	margin-left: 100px;
+	background: transparent;
+	border-radius: 10px;
+	color: #EBEFF2;
 	font-size: 30px;
+	cursor: hand;
 }

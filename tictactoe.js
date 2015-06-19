@@ -1,3 +1,5 @@
+// var main = function() {
+
 var xo = ["X", "O"];
 var i = 0;
 var x = [];
@@ -13,7 +15,8 @@ function changeColor(id) {
 
 	//For the X
 	if(i == 0 && box.innerHTML == "" && won == false){
-		box.style.backgroundColor = "green";
+		box.style.backgroundColor = "#A66D60";
+		box.style.color = "#260F0A"
 		box.innerHTML = xo[i];
 		x.push(id);
 
@@ -30,9 +33,17 @@ function changeColor(id) {
 
 		i = 1;
 
+		//change hover color
+		var boxes = document.getElementsByClassName("box");
+		for( var boxInc = 0; boxInc < boxes.length; boxInc++){
+			boxes[boxInc].classList.remove("x-hov");
+			boxes[boxInc].classList.add("o-hov");
+		}
+
 	//For the O
 	}else if(i == 1 && box.innerHTML == "" && won == false){
-		box.style.backgroundColor = "yellow";
+		box.style.backgroundColor = "#0D0603";
+		box.style.color = "#EBEFF2"
 		box.innerHTML = xo[i];
 		o.push(id);
 
@@ -42,6 +53,13 @@ function changeColor(id) {
 		}
 
 		i = 0;
+
+		//change hover color
+		var boxes = document.getElementsByClassName("box");
+		for( var boxInc = 0; boxInc < boxes.length; boxInc++){
+			boxes.classList.remove("o-hov");
+			boxes.classList.add("x-hov");
+		}
 
 	//reset everything!
 	}else if(won == true || catsGame == true){
@@ -71,11 +89,20 @@ function winCheck(player){
 	}
 }
 
+// $(".box").hover(function(){
+// 	if( i == 0 ){
+// 		$(".box:hover").css('background-color', 'green');
+// 	}else{
+// 		$(".box:hover").css('background-color', 'red');
+// 	}}, function() {
+// 		$(".box:hover").css('background-color', 'white');
+// 	})
+
 function reset(){
 	//Can I name this var i?
 	for(var b = 1; b < 10; b++) {
 		allBox = document.getElementById(b);
-		allBox.style.backgroundColor = "gray";
+		allBox.style.backgroundColor = "#EBEFF2";
 		allBox.innerHTML = "";
 	}
 	//initialize variables
@@ -85,3 +112,5 @@ function reset(){
 	won = false;
 	catsGame = false;
 }
+
+// $(document).ready(main());
