@@ -34,7 +34,7 @@ h1{
 }
 
 .o-hov:hover{
-	background-color: black;
+	background-color: #0D0603;
 }
 
 .x-hov{
@@ -42,7 +42,7 @@ h1{
 }
 
 .x-hov:hover{
-	background-color: red;
+	background-color: #A66D60;
 }
 
 button{

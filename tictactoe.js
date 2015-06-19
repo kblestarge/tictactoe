@@ -12,6 +12,7 @@ var catsGame = false;
 function changeColor(id) {
 
 	box = document.getElementById(id);
+	var boxes = document.getElementsByClassName("box");
 
 	//For the X
 	if(i == 0 && box.innerHTML == "" && won == false){
@@ -34,7 +35,6 @@ function changeColor(id) {
 		i = 1;
 
 		//change hover color
-		var boxes = document.getElementsByClassName("box");
 		for( var boxInc = 0; boxInc < boxes.length; boxInc++){
 			boxes[boxInc].classList.remove("x-hov");
 			boxes[boxInc].classList.add("o-hov");
@@ -55,10 +55,9 @@ function changeColor(id) {
 		i = 0;
 
 		//change hover color
-		var boxes = document.getElementsByClassName("box");
 		for( var boxInc = 0; boxInc < boxes.length; boxInc++){
-			boxes.classList.remove("o-hov");
-			boxes.classList.add("x-hov");
+			boxes[boxInc].classList.remove("o-hov");
+			boxes[boxInc].classList.add("x-hov");
 		}
 
 	//reset everything!
